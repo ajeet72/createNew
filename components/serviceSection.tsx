@@ -1,6 +1,6 @@
 "use client";
 import { AnimatePresence, motion } from "framer-motion";
-import { Map, Film, Sparkles, Layers, Image, Palette, Clapperboard, Scissors, FileText } from "lucide-react";
+import { Map, Film, Sparkles, Layers, Image, Palette, Clapperboard, Scissors, FileText, Search } from "lucide-react";
 
 
 import { Cpu } from "lucide-react";
@@ -344,7 +344,7 @@ export function CustomPdf() {
       {/* Top Tag */}
       <div className="mb-4 text-sm text-gray-400 flex items-center gap-2 relative z-10">
         <FileText className="text-red-400" size={20} />
-        Custom Pdf
+        Real Estate Visualization
       </div>
 
       {/* Video Preview */}
@@ -375,26 +375,26 @@ export function CustomPdf() {
       {/* Bottom Content */}
       <div className="mt-6 relative z-10">
         <h3 className="text-xl font-semibold mb-2">
-          Form text to Professional Pdf
+          Maps & Drone Property Visuals
         </h3>
         <p className="text-sm text-gray-300 leading-relaxed">
-          Turn your text into polished, presentation-ready PDFs.
+          High-quality map and drone-style animations <br /> designed for real estate marketing.
         </p>
         <p className="text-sm text-gray-400 mt-3">
-          Enrollment Guides, Reports, Presentations & More
+          Property Locations, Area Highlights, Project Overviews & More
         </p>
       </div>
 
       {/* Tags */}
       <div className="flex flex-wrap gap-2 text-xs text-gray-400 pt-4 relative z-10">
         <span className="bg-[#061f20] px-3 py-1 rounded-full flex items-center gap-1">
-          <Palette size={12} className="text-purple-400" /> Photoshop
+          <Palette size={12} className="text-purple-400" /> Geolayers 3
         </span>
         <span className="bg-[#061f20] px-3 py-1 rounded-full flex items-center gap-1">
           <Clapperboard size={12} className="text-red-400" /> After Effects
         </span>
         <span className="bg-[#061f20] px-3 py-1 rounded-full flex items-center gap-1">
-          <FileText size={12} className="text-green-400" /> Adobe Acrobat
+          <Search size={12} className="text-green-400" /> Google earth
         </span>
       </div>
     </motion.div>
