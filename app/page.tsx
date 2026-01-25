@@ -1,6 +1,7 @@
 import BenefitsSection from "@/components/benefitsSection";
 import CursorGradient from "@/components/cursorGradient";
 import HeroSection from "@/components/hero";
+import ProcessSection from "@/components/processSection";
 import ServiceSection from "@/components/serviceSection";
 import TopBar from "@/components/topbar";
 
@@ -13,6 +14,8 @@ export default function Home() {
         <HeroSection id="home"/>
         <ServiceSection id="services"/>
         <BenefitsSection id="benefits"/>
+        <ProcessSection id="approach"/>
+        
       </div>
     </main>
   );
