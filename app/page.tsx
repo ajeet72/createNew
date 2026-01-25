@@ -1,4 +1,5 @@
 import CursorGradient from "@/components/cursorGradient";
+import HeroSection from "@/components/hero";
 import TopBar from "@/components/topbar";
 
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
       <CursorGradient />
       <div className="relative z-10">
         <TopBar />
+        <HeroSection id="home"/>
       </div>
     </main>
   );
