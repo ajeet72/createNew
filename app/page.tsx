@@ -5,6 +5,7 @@ import ProcessSection from "@/components/processSection";
 import ProjectsSection from "@/components/projectsSection";
 import ServiceSection from "@/components/serviceSection";
 import SkillsComponent from "@/components/skillsSection";
+import TestimonialsSection from "@/components/testimonialSection";
 import TopBar from "@/components/topbar";
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
         <ProcessSection id="approach"/>
         <SkillsComponent id="skills"/>
         <ProjectsSection id="projects"/>
+        <TestimonialsSection id="testimonials"/>
       </div>
     </main>
   );
