@@ -18,7 +18,7 @@ export default function SkillsComponent({ id }: { id: string }) {
 
       <div className="relative w-[300px] md:w-[500px] lg:w-[700px] aspect-square">
         <Image
-          src="/skills.png"
+          src="/skills1.png"
           alt="Central Visual"
           fill
           className="object-contain"

@@ -138,13 +138,13 @@ export function CustomMap() {
 
       {/* Tags */}
       <div className="flex flex-wrap gap-2 text-xs text-gray-400 pt-4 relative z-10">
-        <span className="bg-[#1a1a1a] px-3 py-1 rounded-full flex items-center gap-1">
+        <span className="bg-[#061f20] px-3 py-1 rounded-full flex items-center gap-1">
           <Layers size={12} className="text-purple-400" /> GeoLayers 3
         </span>
-        <span className="bg-[#1a1a1a] px-3 py-1 rounded-full flex items-center gap-1">
+        <span className="bg-[#061f20] px-3 py-1 rounded-full flex items-center gap-1">
           <Film size={12} className="text-red-400" /> Maptiler
         </span>
-        <span className="bg-[#1a1a1a] px-3 py-1 rounded-full flex items-center gap-1">
+        <span className="bg-[#061f20] px-3 py-1 rounded-full flex items-center gap-1">
           <Map size={12} className="text-green-400" /> Mapbox
         </span>
       </div>
@@ -225,13 +225,13 @@ export function CustomThumbnail() {
 
       {/* Tags */}
       <div className="flex flex-wrap gap-2 text-xs text-gray-400 pt-4 relative z-10">
-        <span className="bg-[#1a1a1a] px-3 py-1 rounded-full flex items-center gap-1">
+        <span className="bg-[#061f20] px-3 py-1 rounded-full flex items-center gap-1">
           <Palette size={12} className="text-purple-400" /> Photoshop
         </span>
-        <span className="bg-[#1a1a1a] px-3 py-1 rounded-full flex items-center gap-1">
+        <span className="bg-[#061f20] px-3 py-1 rounded-full flex items-center gap-1">
           <Clapperboard size={12} className="text-red-400" /> After effects
         </span>
-        <span className="bg-[#1a1a1a] px-3 py-1 rounded-full flex items-center gap-1">
+        <span className="bg-[#061f20] px-3 py-1 rounded-full flex items-center gap-1">
           <Cpu size={12} className="text-green-400" /> AI
         </span>
       </div>
@@ -297,13 +297,13 @@ export function VideoEditingServices() {
 
       {/* Tags */}
       <div className="flex flex-wrap gap-2 text-xs text-gray-400 pt-4 relative z-10">
-        <span className="bg-[#1a1a1a] px-3 py-1 rounded-full flex items-center gap-1">
+        <span className="bg-[#061f20] px-3 py-1 rounded-full flex items-center gap-1">
           <Palette size={12} className="text-purple-400" /> Photoshop
         </span>
-        <span className="bg-[#1a1a1a] px-3 py-1 rounded-full flex items-center gap-1">
+        <span className="bg-[#061f20] px-3 py-1 rounded-full flex items-center gap-1">
           <Clapperboard size={12} className="text-red-400" /> After Effects
         </span>
-        <span className="bg-[#1a1a1a] px-3 py-1 rounded-full flex items-center gap-1">
+        <span className="bg-[#061f20] px-3 py-1 rounded-full flex items-center gap-1">
           <Scissors size={12} className="text-green-400" /> Premier Pro
         </span>
       </div>
@@ -387,13 +387,13 @@ export function CustomPdf() {
 
       {/* Tags */}
       <div className="flex flex-wrap gap-2 text-xs text-gray-400 pt-4 relative z-10">
-        <span className="bg-[#1a1a1a] px-3 py-1 rounded-full flex items-center gap-1">
+        <span className="bg-[#061f20] px-3 py-1 rounded-full flex items-center gap-1">
           <Palette size={12} className="text-purple-400" /> Photoshop
         </span>
-        <span className="bg-[#1a1a1a] px-3 py-1 rounded-full flex items-center gap-1">
+        <span className="bg-[#061f20] px-3 py-1 rounded-full flex items-center gap-1">
           <Clapperboard size={12} className="text-red-400" /> After Effects
         </span>
-        <span className="bg-[#1a1a1a] px-3 py-1 rounded-full flex items-center gap-1">
+        <span className="bg-[#061f20] px-3 py-1 rounded-full flex items-center gap-1">
           <FileText size={12} className="text-green-400" /> Adobe Acrobat
         </span>
       </div>
