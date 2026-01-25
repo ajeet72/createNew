@@ -7,7 +7,7 @@ export const cardVariants: Variants = {
     y: direction === "bottom" ? 100 : 0,
   }),
 
-  visible: (direction: "left" | "right" | "bottom") => ({
+  visible: () => ({
     opacity: 1,
     x: 0,
     y: 0,
