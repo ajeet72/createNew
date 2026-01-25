@@ -1,0 +1,436 @@
+"use client";
+import { AnimatePresence, motion } from "framer-motion";
+import { Map, Film, Sparkles, Layers, Image, Palette, Clapperboard, Scissors, FileText } from "lucide-react";
+
+import { Variants } from "framer-motion";
+
+export const slideVariants: Variants = {
+  hidden: (direction: "left" | "right" | "bottom") => ({
+    opacity: 0,
+    x: direction === "left" ? -50 : direction === "right" ? 50 : 0,
+    y: direction === "bottom" ? 50 : 0,
+  }),
+
+  visible: {
+    opacity: 1,
+    x: 0,
+    y: 0,
+    transition: {
+      type: "tween",       // ✅ literal, not string
+      duration: 0.6,
+      ease: "easeOut",     // ✅ valid easing
+    },
+  },
+};
+
+
+import {
+  Bot,
+  Users,
+  Cpu,
+  Wrench,
+  Activity,
+  BadgeCheck,
+  Cloud,
+  CreditCard,
+  TrendingUp,
+  Globe,
+  Search,
+  Zap,
+} from "lucide-react";
+import { useEffect, useState } from "react";
+import CenterButton from "./centerButton";
+import { cardVariants } from "@/utils/motionConfig";
+
+export default function ServiceSection({ id }: { id: string }) {
+  return (
+    <div id={id} className="overflow-x-hidden">
+      <CenterButton name="Services" />
+      <FeatureCards />
+      <AIDashboard />
+    </div>
+  );
+}
+
+export function FeatureCards() {
+  return (
+    <div className="flex items-center justify-center px-6 pb-6">
+      <motion.div
+        className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-7xl"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.5 }}
+        variants={{
+          visible: {
+            transition: { staggerChildren: 0.2 },
+          },
+        }}
+      >
+        <motion.div
+          custom="left"
+          variants={cardVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+        >
+          <CustomMap />
+        </motion.div>
+
+        <motion.div
+          custom="bottom"
+          variants={cardVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+        >
+          <CustomThumbnail />
+        </motion.div>
+
+        <motion.div
+          custom="right"
+          variants={cardVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+        >
+          <VideoEditingServices />
+        </motion.div>
+      </motion.div>
+    </div>
+  );
+}
+
+export function CustomMap() {
+  const images = ["/mapImages/13.png", "/mapImages/1.jpg", "/mapImages/2.png"]; // Add your image paths
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 2000); 
+
+    return () => clearInterval(interval);
+  }, [images.length]);
+
+  return (
+    <motion.div
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className="relative bg-gradient-to-br from-[#161616] via-[#202020] to-[#0E0E0E] text-white rounded-2xl p-6 border border-gray-800 shadow-lg hover:shadow-2xl transition-all flex flex-col justify-between min-h-[350px] md:min-h-[500px] overflow-hidden"
+    >
+      {/* Cinematic Glow */}
+      <div className="absolute inset-0 bg-gradient-to-tr from-red-900/20 via-transparent to-purple-800/20 blur-3xl"></div>
+
+      {/* Top Tag */}
+      <div className="mb-4 text-sm text-gray-400 flex items-center gap-2 relative z-10">
+        <Map className="text-red-400" size={20} />
+        Custom Map
+      </div>
+
+      {/* Preview / Thumbnail with Slideshow */}
+      <motion.div
+        initial={{ scale: 0.95, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ delay: 0.2, duration: 0.8 }}
+        className="relative w-full h-60 md:h-60 rounded-xl overflow-hidden border border-gray-700 shadow-md"
+      >
+        <AnimatePresence>
+          <motion.img
+            key={currentImageIndex}
+            src={images[currentImageIndex]}
+            alt="Custom Map Preview"
+            initial={{ x: "100%", opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            exit={{ x: "-100%", opacity: 0 }}
+            transition={{ duration: 0.8, }}
+            className="w-full h-full object-cover absolute top-0 left-0"
+          />
+        </AnimatePresence>
+
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-4">
+          <div className="flex items-center gap-2 text-xs text-gray-300">
+            <Film size={14} className="text-red-400" />
+            Cinematic Showcase
+          </div>
+        </div>
+      </motion.div>
+
+      {/* Bottom Content */}
+      <div className="mt-6 relative z-10">
+        <h3 className="text-xl font-semibold mb-2">
+          Styled Maps for Your Projects
+        </h3>
+        <p className="text-sm text-gray-300 leading-relaxed">
+          Create professional, custom-styled maps from <span className="text-white font-medium">Mapbox/Maptiler</span> and
+          integrate them into <span className="text-white font-medium">GeoLayers 3</span>.
+        </p>
+        <p className="text-sm text-gray-400 mt-3">
+          Perfect for data visualization, storytelling, and documentaries.
+        </p>
+      </div>
+
+      {/* Tags */}
+      <div className="flex flex-wrap gap-2 text-xs text-gray-400 pt-4 relative z-10">
+        <span className="bg-[#1a1a1a] px-3 py-1 rounded-full flex items-center gap-1">
+          <Layers size={12} className="text-purple-400" /> GeoLayers 3
+        </span>
+        <span className="bg-[#1a1a1a] px-3 py-1 rounded-full flex items-center gap-1">
+          <Film size={12} className="text-red-400" /> Maptiler
+        </span>
+        <span className="bg-[#1a1a1a] px-3 py-1 rounded-full flex items-center gap-1">
+          <Map size={12} className="text-green-400" /> Mapbox
+        </span>
+      </div>
+    </motion.div>
+  );
+}
+
+
+
+export function CustomThumbnail() {
+  const images = ["/thumbnailImages/thumbnail1.png", "/thumbnailImages/thumbnail2.png", "/thumbnailImages/thumbnail3.png"]; // Add your image paths
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 2000); // Change image every 2 seconds (adjust as needed)
+
+    return () => clearInterval(interval);
+  }, [images.length]);
+
+  return (
+    <motion.div
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className="relative bg-gradient-to-br from-[#0D0D0D] via-[#1A1A1A] to-black text-white rounded-2xl p-6 border border-gray-800 shadow-lg hover:shadow-2xl transition-all flex flex-col justify-between min-h-[350px] md:min-h-[500px] overflow-hidden"
+    >
+      {/* Cinematic Glow */}
+      <div className="absolute inset-0 bg-gradient-to-tr from-red-900/20 via-transparent to-purple-800/20 blur-3xl"></div>
+
+      {/* Top Tag */}
+      <div className="mb-4 text-sm text-gray-400 flex items-center gap-2 relative z-10">
+        <Image className="text-red-400" size={20} />
+        Geography Thumbnail
+      </div>
+
+      {/* Preview / Thumbnail with Slideshow */}
+      <motion.div
+        initial={{ scale: 0.95, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ delay: 0.2, duration: 0.8 }}
+        className="relative w-full h-60 md:h-60 rounded-xl overflow-hidden border border-gray-700 shadow-md"
+      >
+        <AnimatePresence>
+          <motion.img
+            key={currentImageIndex}
+            src={images[currentImageIndex]}
+            alt="Custom Map Preview"
+            initial={{ x: "100%", opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            exit={{ x: "-100%", opacity: 0 }}
+            transition={{ duration: 0.8, }}
+            className="w-full h-full object-fit absolute top-0 left-0"
+          />
+        </AnimatePresence>
+
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-4">
+          <div className="flex items-center gap-2 text-xs text-gray-300">
+            <Film size={14} className="text-red-400" />
+            Cinematic Showcase
+          </div>
+        </div>
+      </motion.div>
+
+      {/* Bottom Content */}
+      <div className="mt-6 relative z-10">
+        <h3 className="text-xl font-semibold mb-2">
+          High-Quality YouTube Thumbnails
+        </h3>
+        <p className="text-sm text-gray-300 leading-relaxed">
+          Get thumbnails designed to grab attention and increase clicks.
+        </p>
+        <p className="text-sm text-gray-400 mt-3">
+           Tailored to your script, references, and channel style.
+        </p>
+      </div>
+
+      {/* Tags */}
+      <div className="flex flex-wrap gap-2 text-xs text-gray-400 pt-4 relative z-10">
+        <span className="bg-[#1a1a1a] px-3 py-1 rounded-full flex items-center gap-1">
+          <Palette size={12} className="text-purple-400" /> Photoshop
+        </span>
+        <span className="bg-[#1a1a1a] px-3 py-1 rounded-full flex items-center gap-1">
+          <Clapperboard size={12} className="text-red-400" /> After effects
+        </span>
+        <span className="bg-[#1a1a1a] px-3 py-1 rounded-full flex items-center gap-1">
+          <Cpu size={12} className="text-green-400" /> AI
+        </span>
+      </div>
+    </motion.div>
+  );
+}
+
+
+
+export function VideoEditingServices() {
+  return (
+    <motion.div
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className="relative bg-gradient-to-br from-[#0D0D0D] via-[#1A1A1A] to-black text-white rounded-2xl p-6 border border-gray-800 shadow-lg hover:shadow-2xl transition-all flex flex-col justify-between min-h-[350px] md:min-h-[500px] overflow-hidden"
+    >
+      {/* Cinematic Glow */}
+      <div className="absolute inset-0 bg-gradient-to-tr from-red-900/20 via-transparent to-purple-800/20 blur-3xl"></div>
+
+      {/* Top Tag */}
+      <div className="mb-4 text-sm text-gray-400 flex items-center gap-2 relative z-10">
+        <Clapperboard className="text-red-400" size={20} />
+        Video Editing Services
+      </div>
+
+      {/* Video Preview */}
+      <motion.div
+        initial={{ scale: 0.95, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ delay: 0.2, duration: 0.8 }}
+        className="relative w-full h-60 md:h-60 rounded-xl overflow-hidden border border-gray-700 shadow-md"
+      >
+        <video
+          src="/videoEditingService/for video editing service low one.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover absolute top-0 left-0"
+        />
+
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-4">
+          <div className="flex items-center gap-2 text-xs text-gray-300">
+            <Film size={14} className="text-red-400" />
+            Cinematic Showcase
+          </div>
+        </div>
+      </motion.div>
+
+      {/* Bottom Content */}
+      <div className="mt-6 relative z-10">
+        <h3 className="text-xl font-semibold mb-2">
+          Transform Raw Footage to Stories
+        </h3>
+        <p className="text-sm text-gray-300 leading-relaxed">
+          Professional video edits that captivate and boost engagement.
+        </p>
+        <p className="text-sm text-gray-400 mt-3">
+          From simple edits to documentary-style productions.
+        </p>
+      </div>
+
+      {/* Tags */}
+      <div className="flex flex-wrap gap-2 text-xs text-gray-400 pt-4 relative z-10">
+        <span className="bg-[#1a1a1a] px-3 py-1 rounded-full flex items-center gap-1">
+          <Palette size={12} className="text-purple-400" /> Photoshop
+        </span>
+        <span className="bg-[#1a1a1a] px-3 py-1 rounded-full flex items-center gap-1">
+          <Clapperboard size={12} className="text-red-400" /> After Effects
+        </span>
+        <span className="bg-[#1a1a1a] px-3 py-1 rounded-full flex items-center gap-1">
+          <Scissors size={12} className="text-green-400" /> Premier Pro
+        </span>
+      </div>
+    </motion.div>
+  );
+}
+
+export function AIDashboard() {
+  return (
+    <div className="flex flex-col items-center justify-center px-6 text-white overflow-x-hidden">
+      <motion.div
+        className="max-w-7xl"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.5 }}
+      >
+        <motion.div custom="left" variants={cardVariants} initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}>
+          <CustomPdf />
+        </motion.div>
+      </motion.div>
+    </div>
+  );
+}
+
+
+export function CustomPdf() {
+  return (
+    <motion.div
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className="relative bg-gradient-to-br from-[#0D0D0D] via-[#1A1A1A] to-black text-white rounded-2xl p-6 border border-gray-800 shadow-lg hover:shadow-2xl transition-all flex flex-col justify-between min-h-[350px] md:min-h-[500px] overflow-hidden"
+    >
+      {/* Cinematic Glow */}
+      <div className="absolute inset-0 bg-gradient-to-tr from-red-900/20 via-transparent to-purple-800/20 blur-3xl"></div>
+
+      {/* Top Tag */}
+      <div className="mb-4 text-sm text-gray-400 flex items-center gap-2 relative z-10">
+        <FileText className="text-red-400" size={20} />
+        Custom Pdf
+      </div>
+
+      {/* Video Preview */}
+      <motion.div
+        initial={{ scale: 0.95, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ delay: 0.2, duration: 0.8 }}
+        className="relative w-full h-60 md:h-60 rounded-xl overflow-hidden border border-gray-700 shadow-md"
+      >
+        <video
+          src="/videoEditingService/PdfCard.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover absolute top-0 left-0"
+        />
+
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-4">
+          <div className="flex items-center gap-2 text-xs text-gray-300">
+            <Film size={14} className="text-red-400" />
+            Cinematic Showcase
+          </div>
+        </div>
+      </motion.div>
+
+      {/* Bottom Content */}
+      <div className="mt-6 relative z-10">
+        <h3 className="text-xl font-semibold mb-2">
+          Form text to Professional Pdf
+        </h3>
+        <p className="text-sm text-gray-300 leading-relaxed">
+          Turn your text into polished, presentation-ready PDFs.
+        </p>
+        <p className="text-sm text-gray-400 mt-3">
+          Enrollment Guides, Reports, Presentations & More
+        </p>
+      </div>
+
+      {/* Tags */}
+      <div className="flex flex-wrap gap-2 text-xs text-gray-400 pt-4 relative z-10">
+        <span className="bg-[#1a1a1a] px-3 py-1 rounded-full flex items-center gap-1">
+          <Palette size={12} className="text-purple-400" /> Photoshop
+        </span>
+        <span className="bg-[#1a1a1a] px-3 py-1 rounded-full flex items-center gap-1">
+          <Clapperboard size={12} className="text-red-400" /> After Effects
+        </span>
+        <span className="bg-[#1a1a1a] px-3 py-1 rounded-full flex items-center gap-1">
+          <FileText size={12} className="text-green-400" /> Adobe Acrobat
+        </span>
+      </div>
+    </motion.div>
+  );
+}
