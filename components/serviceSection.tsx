@@ -2,42 +2,8 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { Map, Film, Sparkles, Layers, Image, Palette, Clapperboard, Scissors, FileText } from "lucide-react";
 
-import { Variants } from "framer-motion";
 
-export const slideVariants: Variants = {
-  hidden: (direction: "left" | "right" | "bottom") => ({
-    opacity: 0,
-    x: direction === "left" ? -50 : direction === "right" ? 50 : 0,
-    y: direction === "bottom" ? 50 : 0,
-  }),
-
-  visible: {
-    opacity: 1,
-    x: 0,
-    y: 0,
-    transition: {
-      type: "tween",       // ✅ literal, not string
-      duration: 0.6,
-      ease: "easeOut",     // ✅ valid easing
-    },
-  },
-};
-
-
-import {
-  Bot,
-  Users,
-  Cpu,
-  Wrench,
-  Activity,
-  BadgeCheck,
-  Cloud,
-  CreditCard,
-  TrendingUp,
-  Globe,
-  Search,
-  Zap,
-} from "lucide-react";
+import { Cpu } from "lucide-react";
 import { useEffect, useState } from "react";
 import CenterButton from "./centerButton";
 import { cardVariants } from "@/utils/motionConfig";
@@ -116,7 +82,7 @@ export function CustomMap() {
     <motion.div
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="relative bg-gradient-to-br from-[#161616] via-[#202020] to-[#0E0E0E] text-white rounded-2xl p-6 border border-gray-800 shadow-lg hover:shadow-2xl transition-all flex flex-col justify-between min-h-[350px] md:min-h-[500px] overflow-hidden"
+      className="relative bg-gradient-to-br from-[#014a4e] via-[#00383b] to-[#001f21] text-white rounded-2xl p-6 border border-gray-800 shadow-lg hover:shadow-2xl transition-all flex flex-col justify-between min-h-[350px] md:min-h-[500px] overflow-hidden"
     >
       {/* Cinematic Glow */}
       <div className="absolute inset-0 bg-gradient-to-tr from-red-900/20 via-transparent to-purple-800/20 blur-3xl"></div>
@@ -204,7 +170,7 @@ export function CustomThumbnail() {
     <motion.div
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="relative bg-gradient-to-br from-[#0D0D0D] via-[#1A1A1A] to-black text-white rounded-2xl p-6 border border-gray-800 shadow-lg hover:shadow-2xl transition-all flex flex-col justify-between min-h-[350px] md:min-h-[500px] overflow-hidden"
+      className="relative bg-gradient-to-br from-[#014a4e] via-[#00383b] to-[#001f21] text-white rounded-2xl p-6 border border-gray-800 shadow-lg hover:shadow-2xl transition-all flex flex-col justify-between min-h-[350px] md:min-h-[500px] overflow-hidden"
     >
       {/* Cinematic Glow */}
       <div className="absolute inset-0 bg-gradient-to-tr from-red-900/20 via-transparent to-purple-800/20 blur-3xl"></div>
@@ -280,7 +246,7 @@ export function VideoEditingServices() {
     <motion.div
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="relative bg-gradient-to-br from-[#0D0D0D] via-[#1A1A1A] to-black text-white rounded-2xl p-6 border border-gray-800 shadow-lg hover:shadow-2xl transition-all flex flex-col justify-between min-h-[350px] md:min-h-[500px] overflow-hidden"
+      className="relative bg-gradient-to-br from-[#014a4e] via-[#00383b] to-[#001f21] text-white rounded-2xl p-6 border border-gray-800 shadow-lg hover:shadow-2xl transition-all flex flex-col justify-between min-h-[350px] md:min-h-[500px] overflow-hidden"
     >
       {/* Cinematic Glow */}
       <div className="absolute inset-0 bg-gradient-to-tr from-red-900/20 via-transparent to-purple-800/20 blur-3xl"></div>
@@ -370,7 +336,7 @@ export function CustomPdf() {
     <motion.div
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="relative bg-gradient-to-br from-[#0D0D0D] via-[#1A1A1A] to-black text-white rounded-2xl p-6 border border-gray-800 shadow-lg hover:shadow-2xl transition-all flex flex-col justify-between min-h-[350px] md:min-h-[500px] overflow-hidden"
+      className="relative bg-gradient-to-br from-[#014a4e] via-[#00383b] to-[#001f21] text-white rounded-2xl p-6 border border-gray-800 shadow-lg hover:shadow-2xl transition-all flex flex-col justify-between min-h-[350px] md:min-h-[500px] overflow-hidden"
     >
       {/* Cinematic Glow */}
       <div className="absolute inset-0 bg-gradient-to-tr from-red-900/20 via-transparent to-purple-800/20 blur-3xl"></div>
