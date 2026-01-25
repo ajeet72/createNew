@@ -3,6 +3,7 @@ import CursorGradient from "@/components/cursorGradient";
 import HeroSection from "@/components/hero";
 import ProcessSection from "@/components/processSection";
 import ServiceSection from "@/components/serviceSection";
+import SkillsComponent from "@/components/skillsSection";
 import TopBar from "@/components/topbar";
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
         <ServiceSection id="services"/>
         <BenefitsSection id="benefits"/>
         <ProcessSection id="approach"/>
+        <SkillsComponent id="skills"/>
         
       </div>
     </main>
