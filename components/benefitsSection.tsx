@@ -48,20 +48,19 @@ export default function BenefitsSection({ id }: { id: string }) {
           {benefits.map((benefit, idx) => (
             <motion.div
               key={idx}
-              className="relative p-6 rounded-2xl shadow-md hover:shadow-lg transition-all overflow-hidden bg-gray-950"
+              className="relative p-6 rounded-2xl shadow-md hover:shadow-lg transition-all overflow-hidden bg-[#032426]"
               custom="bottom"
               variants={cardVariants}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}
             >
-              <div className="absolute -right-[5px] -top-[5px] h-[120px] w-[120px] bg-[rgba(47,0,255,0.5)] rounded-[231px] blur-[40px] z-[1]" />
-
+            <div className="absolute -right-[5px] -top-[5px] h-[120px] w-[120px] bg-[#053c3e] rounded-[231px] blur-[40px] z-[1]" />
               <div className="relative z-[2]">
-                <div className="mb-4 bg-gray-800 p-2 rounded-md inline-block">
+                <div className="mb-4 bg-[#051f20] p-2 rounded-md inline-block">
                   {benefit.icon}
                 </div>
-                <h3 className="text-xl font-semibold mb-2">{benefit.title}</h3>
+                <h3 className="text-xl font-semibold mb-2 text-[#fdba80]">{benefit.title}</h3>
                 <p className="text-gray-300 text-sm leading-relaxed">
                   {benefit.description}
                 </p>

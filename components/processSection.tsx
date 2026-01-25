@@ -121,7 +121,7 @@ export function ProcessCard({
     <div
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className="group relative max-w-lg mx-auto rounded-2xl bg-gradient-to-br from-[#1A0E2A] via-[#1C112D] to-[#11071F] p-[2px] shadow-xl hover:shadow-2xl transition-all duration-500 border border-gray-800"
+      className="group relative max-w-lg mx-auto rounded-2xl bg-gradient-to-br from-[#053f43] via-[#032426] to-[#021b1d] p-[2px] shadow-xl hover:shadow-2xl transition-all duration-500 border border-gray-800"
     >
       <div className="rounded-2xl overflow-hidden">
         {/* YouTube Video */}
@@ -139,7 +139,7 @@ export function ProcessCard({
 
         {/* Title & Description */}
         <div className="p-5">
-          <h3 className="text-lg font-bold text-white group-hover:text-blue-400 transition">
+          <h3 className="text-lg font-bold text-white group-hover:text-[#fdba80] transition">
             {title}
           </h3>
           <p className="text-gray-300 text-sm mt-3 leading-relaxed">

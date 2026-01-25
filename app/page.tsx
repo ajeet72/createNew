@@ -2,6 +2,7 @@ import BenefitsSection from "@/components/benefitsSection";
 import CallToAction from "@/components/callToAction";
 import ContactForm from "@/components/contactSection";
 import CursorGradient from "@/components/cursorGradient";
+import Footer from "@/components/footer";
 import HeroSection from "@/components/hero";
 import ProcessSection from "@/components/processSection";
 import ProjectsSection from "@/components/projectsSection";
@@ -25,6 +26,7 @@ export default function Home() {
         <TestimonialsSection id="testimonials"/>
         <ContactForm id="contact"/>
         <CallToAction id="cta"/>
+        <Footer />
       </div>
     </main>
   );

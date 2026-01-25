@@ -78,7 +78,7 @@ export default function TopBar() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
       className={`fixed top-0 left-0 right-0 z-50 text-white mx-6 mt-3 md:mx-10 md:mt-4 transition-all duration-300
-        rounded-xl border border-[#fdba80] backdrop-blur-md
+        rounded-xl border border-[dba80]#f backdrop-blur-md
         ${isScrolled ? "md:!mx-auto md:!w-fit md:!px-6" : "lg:mx-68"}
       `}
     >
