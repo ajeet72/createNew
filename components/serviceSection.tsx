@@ -381,7 +381,7 @@ export function CustomPdf() {
           High-quality map and drone-style animations <br /> designed for real estate marketing.
         </p>
         <p className="text-sm text-gray-400 mt-3">
-          Property Locations, Area Highlights, Project Overviews & More
+          Property Maps & Project Views & more.
         </p>
       </div>
 
