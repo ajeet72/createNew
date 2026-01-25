@@ -1,4 +1,6 @@
 import BenefitsSection from "@/components/benefitsSection";
+import CallToAction from "@/components/callToAction";
+import ContactForm from "@/components/contactSection";
 import CursorGradient from "@/components/cursorGradient";
 import HeroSection from "@/components/hero";
 import ProcessSection from "@/components/processSection";
@@ -21,6 +23,8 @@ export default function Home() {
         <SkillsComponent id="skills"/>
         <ProjectsSection id="projects"/>
         <TestimonialsSection id="testimonials"/>
+        <ContactForm id="contact"/>
+        <CallToAction id="cta"/>
       </div>
     </main>
   );
