@@ -1,3 +1,4 @@
+import BenefitsSection from "@/components/benefitsSection";
 import CursorGradient from "@/components/cursorGradient";
 import HeroSection from "@/components/hero";
 import ServiceSection from "@/components/serviceSection";
@@ -11,6 +12,7 @@ export default function Home() {
         <TopBar />
         <HeroSection id="home"/>
         <ServiceSection id="services"/>
+        <BenefitsSection id="benefits"/>
       </div>
     </main>
   );
