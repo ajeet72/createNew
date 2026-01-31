@@ -37,7 +37,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <link rel="icon" href="/favicon.png" type="image/png" />
+      <link rel="icon" href="/favicon.ico" type="image/png" />
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased ${mcLaren.className} antialiased mclaren-font bg-[#002c2f]`}
       >
