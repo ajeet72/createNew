@@ -29,7 +29,7 @@ const benefits = [
     icon: <Zap className="w-6 h-6 text-white" />,
     title: "Increased Productivity",
     description:
-      "Focus only on content creation — Ill handle the editing, design, and rendering to deliver upload-ready videos.",
+      "Focus only on content creation — we’ll handle the editing, design, and rendering to deliver uploadready videos.",
   },
 ];
 
@@ -42,7 +42,7 @@ export default function BenefitsSection({ id }: { id: string }) {
           Maximize efficiency and impact
         </h2>
         <p className="text-gray-300 mb-12 max-w-2xl mx-auto">
-          Discover the key benefits of partnering with us for your motion graphics works.
+          Discover the key benefits of partnering with us for your motion graphics work.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {benefits.map((benefit, idx) => (

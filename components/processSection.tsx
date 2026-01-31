@@ -31,14 +31,14 @@ export default function ProcessSection({ id }: { id: string }) {
           <motion.div custom="left" variants={cardVariants}>
             <ProcessCard
               title="Editing Like Johnny Harris"
-              description="We discuss your goals, target audience, and style. I analyze your references, script, or raw footage to shape a strong editing direction."
+              description="We discuss your goals, target audience, and style. We analyze your references, script, or raw footage to shape a strong editing direction."
               videoUrl="https://www.youtube.com/embed/Cf_pCwgG36U?enablejsapi=1"
             />
           </motion.div>
 
           <motion.div custom="bottom" variants={cardVariants}>
             <ProcessCard
-              title="Making 3D Map Thumbnail"
+              title="Creating 3D Map Thumbnails"
               description="I study your video’s theme, target audience, and competitors to define the right style and emotional hook for your thumbnail."
               videoUrl="https://www.youtube.com/embed/EPrY-_RZkv4?enablejsapi=1"
             />
@@ -46,7 +46,7 @@ export default function ProcessSection({ id }: { id: string }) {
 
           <motion.div custom="right" variants={cardVariants}>
             <ProcessCard
-              title="Recreating Responsible Animation"
+              title="Recreating responsive text animations"
               description="After feedback rounds, I refine the video for accuracy, pacing, and storytelling impact — delivering in the best formats for your platform."
               videoUrl="https://www.youtube.com/embed/gZZtfNefHJ0?enablejsapi=1"
             />

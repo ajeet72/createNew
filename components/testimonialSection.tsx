@@ -37,7 +37,7 @@ export default function TestimonialsSection({ id }: { id: string }) {
     <section id={id} className="text-white px-6 py-20">
       <CenterButton name="Testimonials" />
       <div className="max-w-7xl mx-auto text-center">
-        <h2 className="text-4xl font-bold mb-4">What <span className="text-[#fdba80]"> Our </span>  Clients Say</h2>
+        <h2 className="text-4xl font-bold mb-4">What <span className="text-[#fdba80]"> our </span>  client say</h2>
         <p className="text-gray-300 mb-12 max-w-2xl mx-auto">
           Hear from clients who’ve trusted me to deliver professional map designs, engaging animations, and creative video solutions.
         </p>

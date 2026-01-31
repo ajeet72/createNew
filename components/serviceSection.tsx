@@ -344,7 +344,7 @@ export function CustomPdf() {
       {/* Top Tag */}
       <div className="mb-4 text-sm text-gray-400 flex items-center gap-2 relative z-10">
         <FileText className="text-red-400" size={20} />
-        Real Estate Visualization
+        Real estate animations
       </div>
 
       {/* Video Preview */}
@@ -378,7 +378,7 @@ export function CustomPdf() {
           Maps & Drone Property Visuals
         </h3>
         <p className="text-sm text-gray-300 leading-relaxed">
-          High-quality map and drone-style animations <br /> designed for real estate marketing.
+          We create cinematic real estate animations <br /> that bring properties to life.
         </p>
         <p className="text-sm text-gray-400 mt-3">
           Property Maps & Project Views & more.

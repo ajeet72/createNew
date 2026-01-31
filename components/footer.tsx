@@ -38,7 +38,7 @@ export default function Footer() {
             <h1 className="text-xl font-semibold">Create New</h1>
           </div>
           <p className="max-w-xs text-sm text-gray-300 mb-6 mx-auto md:mx-0">
-            Crafting engaging maps, cinematic animations, and clean edits using tools like After Effects, Premiere Pro, and Mapbox. Focused on storytelling, visuals, and designs built to inspire and last.
+            Crafting engaging maps, cinematic animations, and clean edits using After Effects, Premiere Pro, and Mapbox. Focused on storytelling-driven visuals built to inspire and last.
           </p>
 
           {/* Social Icons */}
