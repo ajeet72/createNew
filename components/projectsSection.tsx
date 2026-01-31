@@ -33,6 +33,13 @@ export default function ProjectsSection({ id }: { id: string }) {
         images={["/mapImages/1.jpg", "/mapImages/2.jpg", "/mapImages/13.jpg", "/mapImages/4.jpg", "/mapImages/5.jpg", "/mapImages/6.jpg", "/mapImages/7.jpg", "/mapImages/8.jpg", "/mapImages/9.jpg", "/mapImages/10.jpg", "/mapImages/11.jpg", "/mapImages/12.jpg", "/mapImages/13.jpg", "/mapImages/14.jpg", "/mapImages/15.jpg", "/mapImages/16.jpg", "/mapImages/17.jpg", "/mapImages/18.jpg"]}
         reverse={true}
       />
+      <ProjectCard
+        title="Real Estate Animation Services"
+        description="We specialize in real estate animations crafted from drone footage, enhancing aerial visuals with motion graphics, labels, and cinematic transitions. From highlighting property boundaries to showcasing nearby landmarks and infrastructure, we help real estate projects stand out and communicate value clearly."
+        projectUrl="https://www.youtube.com/watch?v=etUM_GKxEEU"
+        scrollImage={false}
+        video="/videoEditingService/project3.mp4"
+      />
     </section>
   );
 }
